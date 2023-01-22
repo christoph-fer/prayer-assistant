@@ -54,7 +54,7 @@
 		4A23D4FD2939222300DD63E5 /* MariyanPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariyanPrayers.swift; sourceTree = "<group>"; };
 		4A23D4FF2939242500DD63E5 /* MarianPrayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarianPrayersList.swift; sourceTree = "<group>"; };
 		4A23D5012939246C00DD63E5 /* MarianPrayersDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarianPrayersDetail.swift; sourceTree = "<group>"; };
-		4A29B7C128DB756000A8F96E /* Prayer Assistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Prayer Assistant.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A29B7C128DB756000A8F96E /* catholically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catholically.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A29B7C428DB756000A8F96E /* Prayer_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer_AssistantApp.swift; sourceTree = "<group>"; };
 		4A29B7C628DB756000A8F96E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A29B7C828DB756000A8F96E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 		4A29B7C228DB756000A8F96E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A29B7C128DB756000A8F96E /* Prayer Assistant.app */,
+				4A29B7C128DB756000A8F96E /* catholically.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -220,9 +220,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A29B7C028DB756000A8F96E /* Prayer Assistant */ = {
+		4A29B7C028DB756000A8F96E /* catholically */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "Prayer Assistant" */;
+			buildConfigurationList = 4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholically" */;
 			buildPhases = (
 				4A29B7BD28DB756000A8F96E /* Sources */,
 				4A29B7BE28DB756000A8F96E /* Frameworks */,
@@ -232,9 +232,9 @@
 			);
 			dependencies = (
 			);
-			name = "Prayer Assistant";
+			name = catholically;
 			productName = "Prayer Assistant";
-			productReference = 4A29B7C128DB756000A8F96E /* Prayer Assistant.app */;
+			productReference = 4A29B7C128DB756000A8F96E /* catholically.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +252,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "Prayer Assistant" */;
+			buildConfigurationList = 4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholically" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -265,7 +265,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A29B7C028DB756000A8F96E /* Prayer Assistant */,
+				4A29B7C028DB756000A8F96E /* catholically */,
 			);
 		};
 /* End PBXProject section */
@@ -448,7 +448,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Prayer Assistant/Preview Content\"";
-				DEVELOPMENT_TEAM = F438DLL3FF;
+				DEVELOPMENT_TEAM = 4T47XT35QT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -498,7 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Prayer Assistant/Preview Content\"";
-				DEVELOPMENT_TEAM = F438DLL3FF;
+				DEVELOPMENT_TEAM = 4T47XT35QT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -539,7 +539,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "Prayer Assistant" */ = {
+		4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholically" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A29B7CE28DB756000A8F96E /* Debug */,
@@ -548,7 +548,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "Prayer Assistant" */ = {
+		4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholically" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A29B7D128DB756000A8F96E /* Debug */,

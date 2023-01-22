@@ -87,7 +87,7 @@ struct ContentView: View {
                     ScrollView(.vertical, showsIndicators: false, content: {
                         VStack {
                             HStack {
-                                Text("A Catholic Prayer Companion")
+                                Text("the catholic prayer companion.")
                                     .padding(.leading)
                                     .multilineTextAlignment(.leading)
                                 Spacer()
@@ -362,7 +362,7 @@ struct ContentView: View {
                         //                        .navigationTitle("Prayer Assistant")
                     })
                 )
-                .navigationTitle("Prayer Assistant")
+                .navigationTitle("catholically.")
                 .navigationBarTitleDisplayMode(.large)
                 
                 VStack (spacing: 4) {
@@ -378,7 +378,7 @@ struct ContentView: View {
                             Animation
                                 .spring(response: 1, blendDuration: 5)
                         )
-                    Text("Prayer Assistant")
+                    Text("the catholically.")
                         .font(.largeTitle)
                         .fontWeight(.bold)
                     
