@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4A29B7C028DB756000A8F96E"
-               BuildableName = "catholically.app"
-               BlueprintName = "catholically"
-               ReferencedContainer = "container:catholically.xcodeproj">
+               BuildableName = "catholicism.app"
+               BlueprintName = "catholicism"
+               ReferencedContainer = "container:catholicism.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A29B7C028DB756000A8F96E"
-            BuildableName = "catholically.app"
-            BlueprintName = "catholically"
-            ReferencedContainer = "container:catholically.xcodeproj">
+            BuildableName = "catholicism.app"
+            BlueprintName = "catholicism"
+            ReferencedContainer = "container:catholicism.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <StoreKitConfigurationFileReference
@@ -65,9 +65,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A29B7C028DB756000A8F96E"
-            BuildableName = "catholically.app"
-            BlueprintName = "catholically"
-            ReferencedContainer = "container:catholically.xcodeproj">
+            BuildableName = "catholicism.app"
+            BlueprintName = "catholicism"
+            ReferencedContainer = "container:catholicism.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

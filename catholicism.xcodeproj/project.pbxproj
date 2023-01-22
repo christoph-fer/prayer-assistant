@@ -22,7 +22,6 @@
 		4A4D86BB28DF6F57008F3E06 /* Prayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86BA28DF6F57008F3E06 /* Prayers.swift */; };
 		4A4D86BD28DF741C008F3E06 /* PrayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86BC28DF741C008F3E06 /* PrayersListView.swift */; };
 		4A4D86BF28DF779A008F3E06 /* PrayersDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86BE28DF779A008F3E06 /* PrayersDetailView.swift */; };
-		4A4D86C128DFF97A008F3E06 /* EssentialPrayersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86C028DFF97A008F3E06 /* EssentialPrayersList.swift */; };
 		4A4D86C328DFFC45008F3E06 /* EssentialPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86C228DFFC45008F3E06 /* EssentialPrayers.swift */; };
 		4A4D86C528DFFD5E008F3E06 /* EssentialPrayersDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86C428DFFD5E008F3E06 /* EssentialPrayersDetail.swift */; };
 		4A7FE26828ECD5160071FE39 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FE26728ECD5160071FE39 /* StationDetail.swift */; };
@@ -41,6 +40,10 @@
 		4AE10DE428FF31B900452821 /* HymnDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE10DE328FF31B900452821 /* HymnDetail.swift */; };
 		4AF032CE291809F500D19319 /* Prayer_AssistantApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A29B7C428DB756000A8F96E /* Prayer_AssistantApp.swift */; };
 		4AF71AE628FBDDD9001D0DC6 /* RosaryDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF71AE528FBDDD9001D0DC6 /* RosaryDetail.swift */; };
+		4AFA4A18297D2E3200A16C55 /* EssentialPrayersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA4A17297D2E3200A16C55 /* EssentialPrayersList.swift */; };
+		4AFA4A1A297D2FAC00A16C55 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA4A19297D2FAC00A16C55 /* MainPage.swift */; };
+		4AFA4A1C297D33E800A16C55 /* Hymns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA4A1B297D33E800A16C55 /* Hymns.swift */; };
+		4AFA4A1F297D349F00A16C55 /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA4A1E297D349F00A16C55 /* Donate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +57,7 @@
 		4A23D4FD2939222300DD63E5 /* MariyanPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariyanPrayers.swift; sourceTree = "<group>"; };
 		4A23D4FF2939242500DD63E5 /* MarianPrayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarianPrayersList.swift; sourceTree = "<group>"; };
 		4A23D5012939246C00DD63E5 /* MarianPrayersDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarianPrayersDetail.swift; sourceTree = "<group>"; };
-		4A29B7C128DB756000A8F96E /* catholically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catholically.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A29B7C128DB756000A8F96E /* catholicism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catholicism.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A29B7C428DB756000A8F96E /* Prayer_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer_AssistantApp.swift; sourceTree = "<group>"; };
 		4A29B7C628DB756000A8F96E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A29B7C828DB756000A8F96E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,7 +66,6 @@
 		4A4D86BA28DF6F57008F3E06 /* Prayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayers.swift; sourceTree = "<group>"; };
 		4A4D86BC28DF741C008F3E06 /* PrayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersListView.swift; sourceTree = "<group>"; };
 		4A4D86BE28DF779A008F3E06 /* PrayersDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersDetailView.swift; sourceTree = "<group>"; };
-		4A4D86C028DFF97A008F3E06 /* EssentialPrayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialPrayersList.swift; sourceTree = "<group>"; };
 		4A4D86C228DFFC45008F3E06 /* EssentialPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialPrayers.swift; sourceTree = "<group>"; };
 		4A4D86C428DFFD5E008F3E06 /* EssentialPrayersDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialPrayersDetail.swift; sourceTree = "<group>"; };
 		4A7FE26728ECD5160071FE39 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
@@ -81,6 +83,10 @@
 		4AE10DE128FF2D4700452821 /* HymnsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnsContent.swift; sourceTree = "<group>"; };
 		4AE10DE328FF31B900452821 /* HymnDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnDetail.swift; sourceTree = "<group>"; };
 		4AF71AE528FBDDD9001D0DC6 /* RosaryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaryDetail.swift; sourceTree = "<group>"; };
+		4AFA4A17297D2E3200A16C55 /* EssentialPrayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialPrayersList.swift; sourceTree = "<group>"; };
+		4AFA4A19297D2FAC00A16C55 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
+		4AFA4A1B297D33E800A16C55 /* Hymns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hymns.swift; sourceTree = "<group>"; };
+		4AFA4A1E297D349F00A16C55 /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +152,7 @@
 		4A29B7C228DB756000A8F96E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A29B7C128DB756000A8F96E /* catholically.app */,
+				4A29B7C128DB756000A8F96E /* catholicism.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -156,8 +162,9 @@
 			children = (
 				4A29B7C428DB756000A8F96E /* Prayer_AssistantApp.swift */,
 				4A29B7C628DB756000A8F96E /* ContentView.swift */,
-				4AE10DE328FF31B900452821 /* HymnDetail.swift */,
-				4AE10DE128FF2D4700452821 /* HymnsContent.swift */,
+				4AFA4A19297D2FAC00A16C55 /* MainPage.swift */,
+				4AFA4A1E297D349F00A16C55 /* Donate.swift */,
+				4AFA4A1D297D347C00A16C55 /* Hymns */,
 				4ABF7345293A652A00A8658D /* Popular Psalms */,
 				4AA5769529424860008BCA9F /* Prayer to Saints */,
 				4A23D4FC2939220D00DD63E5 /* Marian Prayers */,
@@ -210,19 +217,29 @@
 		4AD49CB328E362BC007298DA /* Essential Prayers */ = {
 			isa = PBXGroup;
 			children = (
-				4A4D86C028DFF97A008F3E06 /* EssentialPrayersList.swift */,
+				4AFA4A17297D2E3200A16C55 /* EssentialPrayersList.swift */,
 				4A4D86C428DFFD5E008F3E06 /* EssentialPrayersDetail.swift */,
 				4A4D86C228DFFC45008F3E06 /* EssentialPrayers.swift */,
 			);
 			path = "Essential Prayers";
 			sourceTree = "<group>";
 		};
+		4AFA4A1D297D347C00A16C55 /* Hymns */ = {
+			isa = PBXGroup;
+			children = (
+				4AFA4A1B297D33E800A16C55 /* Hymns.swift */,
+				4AE10DE328FF31B900452821 /* HymnDetail.swift */,
+				4AE10DE128FF2D4700452821 /* HymnsContent.swift */,
+			);
+			path = Hymns;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A29B7C028DB756000A8F96E /* catholically */ = {
+		4A29B7C028DB756000A8F96E /* catholicism */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholically" */;
+			buildConfigurationList = 4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholicism" */;
 			buildPhases = (
 				4A29B7BD28DB756000A8F96E /* Sources */,
 				4A29B7BE28DB756000A8F96E /* Frameworks */,
@@ -232,9 +249,9 @@
 			);
 			dependencies = (
 			);
-			name = catholically;
+			name = catholicism;
 			productName = "Prayer Assistant";
-			productReference = 4A29B7C128DB756000A8F96E /* catholically.app */;
+			productReference = 4A29B7C128DB756000A8F96E /* catholicism.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -252,7 +269,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholically" */;
+			buildConfigurationList = 4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholicism" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -265,7 +282,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A29B7C028DB756000A8F96E /* catholically */,
+				4A29B7C028DB756000A8F96E /* catholicism */,
 			);
 		};
 /* End PBXProject section */
@@ -299,18 +316,21 @@
 				4AF71AE628FBDDD9001D0DC6 /* RosaryDetail.swift in Sources */,
 				4A0BB3AF296758E400DC18A4 /* StoreKitManager.swift in Sources */,
 				4A4D86BB28DF6F57008F3E06 /* Prayers.swift in Sources */,
+				4AFA4A1A297D2FAC00A16C55 /* MainPage.swift in Sources */,
 				4ABF7347293A656200A8658D /* Psalms.swift in Sources */,
 				4AD49CB528E362DC007298DA /* Stations.swift in Sources */,
 				4A23D5022939246C00DD63E5 /* MarianPrayersDetail.swift in Sources */,
 				4A23D4FA29390E5500DD63E5 /* DailyPrayersDetail.swift in Sources */,
 				4AE10DE228FF2D4700452821 /* HymnsContent.swift in Sources */,
 				4A0BB3AA2967459D00DC18A4 /* Store.swift in Sources */,
+				4AFA4A1F297D349F00A16C55 /* Donate.swift in Sources */,
+				4AFA4A18297D2E3200A16C55 /* EssentialPrayersList.swift in Sources */,
+				4AFA4A1C297D33E800A16C55 /* Hymns.swift in Sources */,
 				4AA5769B29424A57008BCA9F /* SaintPrayersDetail.swift in Sources */,
 				4A882F4528FB58DC000A3B9F /* Rosary.swift in Sources */,
 				4ABF734B293A66F600A8658D /* PsalmsDetail.swift in Sources */,
 				4AF032CE291809F500D19319 /* Prayer_AssistantApp.swift in Sources */,
 				4A7FE26828ECD5160071FE39 /* StationDetail.swift in Sources */,
-				4A4D86C128DFF97A008F3E06 /* EssentialPrayersList.swift in Sources */,
 				4A23D4F629390D1200DD63E5 /* DailyPrayersList.swift in Sources */,
 				4AD6835C28EF3FE600D6405C /* StationsStart.swift in Sources */,
 				4AE10DE428FF31B900452821 /* HymnDetail.swift in Sources */,
@@ -539,7 +559,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholically" */ = {
+		4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholicism" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A29B7CE28DB756000A8F96E /* Debug */,
@@ -548,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholically" */ = {
+		4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholicism" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A29B7D128DB756000A8F96E /* Debug */,
