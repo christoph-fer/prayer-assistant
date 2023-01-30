@@ -24,6 +24,11 @@
 		4A4D86BF28DF779A008F3E06 /* PrayersDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86BE28DF779A008F3E06 /* PrayersDetailView.swift */; };
 		4A4D86C328DFFC45008F3E06 /* EssentialPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86C228DFFC45008F3E06 /* EssentialPrayers.swift */; };
 		4A4D86C528DFFD5E008F3E06 /* EssentialPrayersDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86C428DFFD5E008F3E06 /* EssentialPrayersDetail.swift */; };
+		4A5350CC29883D3E0009D174 /* EditPrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A5350CB29883D3E0009D174 /* EditPrayerView.swift */; };
+		4A7A66EA298821D900E685B0 /* PrayersModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A66E8298821D900E685B0 /* PrayersModel.xcdatamodeld */; };
+		4A7A66EC29882ACD00E685B0 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A66EB29882ACD00E685B0 /* DataController.swift */; };
+		4A7A66F029882FCE00E685B0 /* AddPrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A66EF29882FCE00E685B0 /* AddPrayerView.swift */; };
+		4A7A66F22988321300E685B0 /* PersonalPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A66F12988321300E685B0 /* PersonalPrayers.swift */; };
 		4A7FE26828ECD5160071FE39 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FE26728ECD5160071FE39 /* StationDetail.swift */; };
 		4A882F4528FB58DC000A3B9F /* Rosary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A882F4428FB58DC000A3B9F /* Rosary.swift */; };
 		4A882F4728FB591A000A3B9F /* RosaryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A882F4628FB591A000A3B9F /* RosaryContent.swift */; };
@@ -44,6 +49,7 @@
 		4AFA4A1A297D2FAC00A16C55 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA4A19297D2FAC00A16C55 /* MainPage.swift */; };
 		4AFA4A1C297D33E800A16C55 /* Hymns.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA4A1B297D33E800A16C55 /* Hymns.swift */; };
 		4AFA4A1F297D349F00A16C55 /* Donate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AFA4A1E297D349F00A16C55 /* Donate.swift */; };
+		4AFA4A22297D5A3B00A16C55 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AFA4A21297D5A3B00A16C55 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +74,11 @@
 		4A4D86BE28DF779A008F3E06 /* PrayersDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayersDetailView.swift; sourceTree = "<group>"; };
 		4A4D86C228DFFC45008F3E06 /* EssentialPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialPrayers.swift; sourceTree = "<group>"; };
 		4A4D86C428DFFD5E008F3E06 /* EssentialPrayersDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialPrayersDetail.swift; sourceTree = "<group>"; };
+		4A5350CB29883D3E0009D174 /* EditPrayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPrayerView.swift; sourceTree = "<group>"; };
+		4A7A66E9298821D900E685B0 /* PrayersModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PrayersModel.xcdatamodel; sourceTree = "<group>"; };
+		4A7A66EB29882ACD00E685B0 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		4A7A66EF29882FCE00E685B0 /* AddPrayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPrayerView.swift; sourceTree = "<group>"; };
+		4A7A66F12988321300E685B0 /* PersonalPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalPrayers.swift; sourceTree = "<group>"; };
 		4A7FE26728ECD5160071FE39 /* StationDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationDetail.swift; sourceTree = "<group>"; };
 		4A882F4428FB58DC000A3B9F /* Rosary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rosary.swift; sourceTree = "<group>"; };
 		4A882F4628FB591A000A3B9F /* RosaryContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaryContent.swift; sourceTree = "<group>"; };
@@ -87,6 +98,7 @@
 		4AFA4A19297D2FAC00A16C55 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		4AFA4A1B297D33E800A16C55 /* Hymns.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hymns.swift; sourceTree = "<group>"; };
 		4AFA4A1E297D349F00A16C55 /* Donate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Donate.swift; sourceTree = "<group>"; };
+		4AFA4A21297D5A3B00A16C55 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS16.2.sdk/System/Library/Frameworks/StoreKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AFA4A22297D5A3B00A16C55 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +159,7 @@
 			children = (
 				4A29B7C328DB756000A8F96E /* Prayer Assistant */,
 				4A29B7C228DB756000A8F96E /* Products */,
+				4AFA4A20297D5A3B00A16C55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +174,9 @@
 		4A29B7C328DB756000A8F96E /* Prayer Assistant */ = {
 			isa = PBXGroup;
 			children = (
+				4A7A66EE29882F9A00E685B0 /* Helpers */,
+				4A7A66ED29882F8200E685B0 /* Views */,
+				4A7A66E72988216E00E685B0 /* DataModel */,
 				4A29B7C428DB756000A8F96E /* Prayer_AssistantApp.swift */,
 				4A29B7C628DB756000A8F96E /* ContentView.swift */,
 				4AFA4A19297D2FAC00A16C55 /* MainPage.swift */,
@@ -192,6 +209,32 @@
 				4A29B7CC28DB756000A8F96E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4A7A66E72988216E00E685B0 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				4A7A66E8298821D900E685B0 /* PrayersModel.xcdatamodeld */,
+				4A7A66EB29882ACD00E685B0 /* DataController.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4A7A66ED29882F8200E685B0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4A7A66EF29882FCE00E685B0 /* AddPrayerView.swift */,
+				4A7A66F12988321300E685B0 /* PersonalPrayers.swift */,
+				4A5350CB29883D3E0009D174 /* EditPrayerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4A7A66EE29882F9A00E685B0 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4AA5769529424860008BCA9F /* Prayer to Saints */ = {
@@ -232,6 +275,14 @@
 				4AE10DE128FF2D4700452821 /* HymnsContent.swift */,
 			);
 			path = Hymns;
+			sourceTree = "<group>";
+		};
+		4AFA4A20297D5A3B00A16C55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AFA4A21297D5A3B00A16C55 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -312,11 +363,14 @@
 				4A4D86BF28DF779A008F3E06 /* PrayersDetailView.swift in Sources */,
 				4A4D86BD28DF741C008F3E06 /* PrayersListView.swift in Sources */,
 				4ABF7349293A663500A8658D /* PsalmsList.swift in Sources */,
+				4A5350CC29883D3E0009D174 /* EditPrayerView.swift in Sources */,
+				4A7A66F029882FCE00E685B0 /* AddPrayerView.swift in Sources */,
 				4AA5769729424885008BCA9F /* SaintPrayers.swift in Sources */,
 				4AF71AE628FBDDD9001D0DC6 /* RosaryDetail.swift in Sources */,
 				4A0BB3AF296758E400DC18A4 /* StoreKitManager.swift in Sources */,
 				4A4D86BB28DF6F57008F3E06 /* Prayers.swift in Sources */,
 				4AFA4A1A297D2FAC00A16C55 /* MainPage.swift in Sources */,
+				4A7A66EA298821D900E685B0 /* PrayersModel.xcdatamodeld in Sources */,
 				4ABF7347293A656200A8658D /* Psalms.swift in Sources */,
 				4AD49CB528E362DC007298DA /* Stations.swift in Sources */,
 				4A23D5022939246C00DD63E5 /* MarianPrayersDetail.swift in Sources */,
@@ -329,6 +383,7 @@
 				4AA5769B29424A57008BCA9F /* SaintPrayersDetail.swift in Sources */,
 				4A882F4528FB58DC000A3B9F /* Rosary.swift in Sources */,
 				4ABF734B293A66F600A8658D /* PsalmsDetail.swift in Sources */,
+				4A7A66F22988321300E685B0 /* PersonalPrayers.swift in Sources */,
 				4AF032CE291809F500D19319 /* Prayer_AssistantApp.swift in Sources */,
 				4A7FE26828ECD5160071FE39 /* StationDetail.swift in Sources */,
 				4A23D4F629390D1200DD63E5 /* DailyPrayersList.swift in Sources */,
@@ -336,6 +391,7 @@
 				4AE10DE428FF31B900452821 /* HymnDetail.swift in Sources */,
 				4AB9076528ED5CDA00656F7B /* StationsContent.swift in Sources */,
 				4A23D4F829390D3B00DD63E5 /* DailyPrayers.swift in Sources */,
+				4A7A66EC29882ACD00E685B0 /* DataController.swift in Sources */,
 				4A4D86C328DFFC45008F3E06 /* EssentialPrayers.swift in Sources */,
 				4A23D5002939242500DD63E5 /* MarianPrayersList.swift in Sources */,
 				4A882F4728FB591A000A3B9F /* RosaryContent.swift in Sources */,
@@ -466,7 +522,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Prayer Assistant/Prayer_Assistant.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Prayer Assistant/Preview Content\"";
 				DEVELOPMENT_TEAM = 4T47XT35QT;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -497,9 +553,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator driverkit iphoneos iphonesimulator watchos watchsimulator";
 				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
@@ -516,7 +572,7 @@
 				CODE_SIGN_ENTITLEMENTS = "Prayer Assistant/Prayer_Assistant.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Prayer Assistant/Preview Content\"";
 				DEVELOPMENT_TEAM = 4T47XT35QT;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -547,9 +603,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos macosx iphonesimulator iphoneos driverkit appletvsimulator appletvos";
+				SUPPORTED_PLATFORMS = "appletvos appletvsimulator driverkit iphoneos iphonesimulator watchos watchsimulator";
 				SUPPORTS_MACCATALYST = YES;
-				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,3,4";
@@ -578,6 +634,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4A7A66E8298821D900E685B0 /* PrayersModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4A7A66E9298821D900E685B0 /* PrayersModel.xcdatamodel */,
+			);
+			currentVersion = 4A7A66E9298821D900E685B0 /* PrayersModel.xcdatamodel */;
+			path = PrayersModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A29B7B928DB756000A8F96E /* Project object */;
 }

@@ -46,6 +46,8 @@ struct MainPage : View {
     
     @State var isAnimated: Bool = false
     
+    @State private var showingAddView = false
+    
     // Color scheme
     @Environment(\.colorScheme) var colorScheme
     
@@ -227,6 +229,27 @@ struct MainPage : View {
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
+                            
+                            NavigationLink(destination: PersonalPrayers().navigationTitle("Your Prayers")) {
+                                ZStack{
+                                    HStack {
+                                        HStack {
+                                            Text("Write your prayer")
+                                                .font(.headline)
+                                                .multilineTextAlignment(.leading)
+                                        }
+                                        Spacer()
+                                        HStack {
+                                            Image(systemName: "square.and.pencil")
+                                        }
+                                    }
+                                    .padding()
+                                }
+                                .frame(height: 50)
+                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                         }
                         .padding(.top, -10.0)
                         .padding(.leading)
@@ -264,31 +287,33 @@ struct MainPage : View {
                     )
                 
                 if horizontalSizeClass == .compact {
-                    Button("start praying.", action: {
+                    Button("Get Started", action: {
                         NavigationUtil.popToRootView()
                     })
                     .buttonStyle(.borderedProminent)
-                        .cornerRadius(20).opacity(1)
-                        .padding(.top, 40.0)
-                        //.fontWeight(.bold)
+                    .cornerRadius(20).opacity(1)
+                    .padding(.top, 40.0)
+                    //.fontWeight(.bold)
                     //.font(.system(.subheadline, design: .rounded))
+                    .opacity(isAnimated ? 1 : 0)
+                    .animation(
+                        Animation
+                            .spring(blendDuration: 1)
+                            .delay(1)
+                    )
+                    .fontWeight(.semibold)
+                    .shadow(color: .accentColor.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 7)
+                } else {
+                    Text("Select a prayer on your left :)")
+                        .opacity(0.7)
+                        .padding()
+                        .font(.system(.subheadline, design: .rounded))
                         .opacity(isAnimated ? 1 : 0)
                         .animation(
                             Animation
                                 .spring(blendDuration: 1)
                                 .delay(1)
                         )
-                } else {
-                                    Text("Select a prayer on your left :)")
-                                        .opacity(0.7)
-                                        .padding()
-                                        .font(.system(.subheadline, design: .rounded))
-                                        .opacity(isAnimated ? 1 : 0)
-                                        .animation(
-                                            Animation
-                                                .spring(blendDuration: 1)
-                                                .delay(1)
-                                        )
                 }
                 Spacer()
             }

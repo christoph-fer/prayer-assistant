@@ -10,10 +10,13 @@ import SwiftUI
 @main
 struct Prayer_AssistantApp: App {
     
+    @StateObject private var dataController = DataController()
+    
     var body: some Scene {
         
         WindowGroup {
             ContentView()
+                .environment(\.managedObjectContext , dataController.container.viewContext)
             
                 .withHostingWindow { window in
                     #if targetEnvironment(macCatalyst)
