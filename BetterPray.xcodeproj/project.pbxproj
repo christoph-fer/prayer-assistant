@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4A0BB3AA2967459D00DC18A4 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BB3A92967459D00DC18A4 /* Store.swift */; };
-		4A0BB3AD296757B700DC18A4 /* PurchaseList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A0BB3AC296757B700DC18A4 /* PurchaseList.plist */; };
 		4A0BB3AF296758E400DC18A4 /* StoreKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A0BB3AE296758E400DC18A4 /* StoreKitManager.swift */; };
 		4A23D4F629390D1200DD63E5 /* DailyPrayersList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23D4F529390D1200DD63E5 /* DailyPrayersList.swift */; };
 		4A23D4F829390D3B00DD63E5 /* DailyPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23D4F729390D3B00DD63E5 /* DailyPrayers.swift */; };
@@ -18,7 +17,6 @@
 		4A23D5022939246C00DD63E5 /* MarianPrayersDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A23D5012939246C00DD63E5 /* MarianPrayersDetail.swift */; };
 		4A29B7C728DB756000A8F96E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A29B7C628DB756000A8F96E /* ContentView.swift */; };
 		4A29B7C928DB756000A8F96E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A29B7C828DB756000A8F96E /* Assets.xcassets */; };
-		4A29B7CD28DB756000A8F96E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A29B7CC28DB756000A8F96E /* Preview Assets.xcassets */; };
 		4A4D86BB28DF6F57008F3E06 /* Prayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86BA28DF6F57008F3E06 /* Prayers.swift */; };
 		4A4D86BD28DF741C008F3E06 /* PrayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86BC28DF741C008F3E06 /* PrayersListView.swift */; };
 		4A4D86BF28DF779A008F3E06 /* PrayersDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D86BE28DF779A008F3E06 /* PrayersDetailView.swift */; };
@@ -30,6 +28,7 @@
 		4A7A66F029882FCE00E685B0 /* AddPrayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A66EF29882FCE00E685B0 /* AddPrayerView.swift */; };
 		4A7A66F22988321300E685B0 /* PersonalPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7A66F12988321300E685B0 /* PersonalPrayers.swift */; };
 		4A7FE26828ECD5160071FE39 /* StationDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FE26728ECD5160071FE39 /* StationDetail.swift */; };
+		4A7FFE4F29A383580083BB24 /* PurchaseList.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4A0BB3AC296757B700DC18A4 /* PurchaseList.plist */; };
 		4A882F4528FB58DC000A3B9F /* Rosary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A882F4428FB58DC000A3B9F /* Rosary.swift */; };
 		4A882F4728FB591A000A3B9F /* RosaryContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A882F4628FB591A000A3B9F /* RosaryContent.swift */; };
 		4AA5769729424885008BCA9F /* SaintPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5769629424885008BCA9F /* SaintPrayers.swift */; };
@@ -63,7 +62,7 @@
 		4A23D4FD2939222300DD63E5 /* MariyanPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MariyanPrayers.swift; sourceTree = "<group>"; };
 		4A23D4FF2939242500DD63E5 /* MarianPrayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarianPrayersList.swift; sourceTree = "<group>"; };
 		4A23D5012939246C00DD63E5 /* MarianPrayersDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarianPrayersDetail.swift; sourceTree = "<group>"; };
-		4A29B7C128DB756000A8F96E /* catholicism.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = catholicism.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A29B7C128DB756000A8F96E /* BetterPray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BetterPray.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A29B7C428DB756000A8F96E /* Prayer_AssistantApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prayer_AssistantApp.swift; sourceTree = "<group>"; };
 		4A29B7C628DB756000A8F96E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4A29B7C828DB756000A8F96E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -93,7 +92,6 @@
 		4AD6835B28EF3FE600D6405C /* StationsStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StationsStart.swift; sourceTree = "<group>"; };
 		4AE10DE128FF2D4700452821 /* HymnsContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnsContent.swift; sourceTree = "<group>"; };
 		4AE10DE328FF31B900452821 /* HymnDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HymnDetail.swift; sourceTree = "<group>"; };
-		4AF0465F2989282B00B691D9 /* catholicism-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "catholicism-Info.plist"; sourceTree = "<group>"; };
 		4AF71AE528FBDDD9001D0DC6 /* RosaryDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosaryDetail.swift; sourceTree = "<group>"; };
 		4AFA4A17297D2E3200A16C55 /* EssentialPrayersList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EssentialPrayersList.swift; sourceTree = "<group>"; };
 		4AFA4A19297D2FAC00A16C55 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
@@ -158,7 +156,6 @@
 		4A29B7B828DB756000A8F96E = {
 			isa = PBXGroup;
 			children = (
-				4AF0465F2989282B00B691D9 /* catholicism-Info.plist */,
 				4A29B7C328DB756000A8F96E /* Prayer Assistant */,
 				4A29B7C228DB756000A8F96E /* Products */,
 				4AFA4A20297D5A3B00A16C55 /* Frameworks */,
@@ -168,7 +165,7 @@
 		4A29B7C228DB756000A8F96E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A29B7C128DB756000A8F96E /* catholicism.app */,
+				4A29B7C128DB756000A8F96E /* BetterPray.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -290,9 +287,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A29B7C028DB756000A8F96E /* catholicism */ = {
+		4A29B7C028DB756000A8F96E /* BetterPray */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholicism" */;
+			buildConfigurationList = 4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "BetterPray" */;
 			buildPhases = (
 				4A29B7BD28DB756000A8F96E /* Sources */,
 				4A29B7BE28DB756000A8F96E /* Frameworks */,
@@ -302,9 +299,11 @@
 			);
 			dependencies = (
 			);
-			name = catholicism;
+			name = BetterPray;
+			packageProductDependencies = (
+			);
 			productName = "Prayer Assistant";
-			productReference = 4A29B7C128DB756000A8F96E /* catholicism.app */;
+			productReference = 4A29B7C128DB756000A8F96E /* BetterPray.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -322,7 +321,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholicism" */;
+			buildConfigurationList = 4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "BetterPray" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -331,11 +330,13 @@
 				Base,
 			);
 			mainGroup = 4A29B7B828DB756000A8F96E;
+			packageReferences = (
+			);
 			productRefGroup = 4A29B7C228DB756000A8F96E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A29B7C028DB756000A8F96E /* catholicism */,
+				4A29B7C028DB756000A8F96E /* BetterPray */,
 			);
 		};
 /* End PBXProject section */
@@ -345,8 +346,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A29B7CD28DB756000A8F96E /* Preview Assets.xcassets in Resources */,
-				4A0BB3AD296757B700DC18A4 /* PurchaseList.plist in Resources */,
+				4A7FFE4F29A383580083BB24 /* PurchaseList.plist in Resources */,
 				4A29B7C928DB756000A8F96E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,13 +524,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Prayer Assistant/Prayer_Assistant.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Prayer Assistant/Preview Content\"";
 				DEVELOPMENT_TEAM = 4T47XT35QT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "catholicism-Info.plist";
+				INFOPLIST_FILE = "BetterPray-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BetterPray;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -551,7 +552,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "christopher.Prayer-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -575,13 +576,14 @@
 				CODE_SIGN_ENTITLEMENTS = "Prayer Assistant/Prayer_Assistant.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_ASSET_PATHS = "\"Prayer Assistant/Preview Content\"";
 				DEVELOPMENT_TEAM = 4T47XT35QT;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "catholicism-Info.plist";
+				INFOPLIST_FILE = "BetterPray-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = BetterPray;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.reference";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -602,7 +604,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.0;
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = "christopher.Prayer-Assistant";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -619,7 +621,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "catholicism" */ = {
+		4A29B7BC28DB756000A8F96E /* Build configuration list for PBXProject "BetterPray" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A29B7CE28DB756000A8F96E /* Debug */,
@@ -628,7 +630,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "catholicism" */ = {
+		4A29B7D028DB756000A8F96E /* Build configuration list for PBXNativeTarget "BetterPray" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A29B7D128DB756000A8F96E /* Debug */,

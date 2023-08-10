@@ -53,11 +53,13 @@ struct Donate : View {
                             VStack {
                                 HStack {
                                     Text("Hello there! 👋🏼 \n\nThanks for using Prayer Assistant! A lot of time and effort goes into developing this app. Moreover, this app is completely free without any ads. You can support Prayer Assistant by considering a small donation which would be deeply appriciated!\n\n – Christopher Fernandes")
+                                        .font(.system(.body, design: .rounded))
                                         .frame(maxWidth: 420)
                                     Spacer()
                                 }
                                 HStack{
                                     Text("Developer, Prayer Assistant")
+                                        .font(.footnote)
                                         .padding([.leading, .bottom], 18.0)
                                         .opacity(0.6)
                                     Spacer()
@@ -114,5 +116,11 @@ struct Donate : View {
                 }
             }
         }
+    }
+}
+
+struct Donate_Previews: PreviewProvider {
+    static var previews: some View {
+        Donate()
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import CoreData
 
 class DataController : ObservableObject {
-    let container = NSPersistentContainer(name: "PrayersModel")
+    let container = NSPersistentCloudKitContainer(name: "PrayersModel")
     
     init() {
         container.loadPersistentStores{ desc, error in

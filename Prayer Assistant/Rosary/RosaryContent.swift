@@ -33,13 +33,13 @@ struct MysteryList {
             mystery1: "The Annunciation",
             mystery1Pic: "announciation2",
             mystery2: "The Visitation",
-            mystery2Pic: "finding",
+            mystery2Pic: "visitation2",
             mystery3: "The Nativity of Jesus",
             mystery3Pic: "nativity2",
             mystery4: "The Presentation of Jesus",
             mystery4Pic: "presentation2",
             mystery5: "The Finding of Jesus",
-            mystery5Pic: "visitation2"
+            mystery5Pic: "finding"
         ),
         Mystery(
             mysteryName: "Thursdays",
@@ -72,7 +72,7 @@ struct MysteryList {
             mystery5Pic: "crucifixion"
         ),
         Mystery(
-            mysteryName: "Wednesday & Sundays",
+            mysteryName: "Wednesdays & Sundays",
             mysteryDesc: "Glorious",
             mysteryPic: "resurrection-pic-2",
             mystery1: "The Resurrection",

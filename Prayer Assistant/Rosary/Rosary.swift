@@ -13,32 +13,32 @@ struct Rosary: View {
     
     @State var selectedMysteryId: UUID?
     
-//    enum Flavor: String, CaseIterable, Identifiable {
-//        case joyful, luminous, sorrowful, glorious
-//        var id: Self { self }
-//    }
-
-//    @State private var selectedFlavor: Flavor = .joyful
+    //    enum Flavor: String, CaseIterable, Identifiable {
+    //        case joyful, luminous, sorrowful, glorious
+    //        var id: Self { self }
+    //    }
+    
+    //    @State private var selectedFlavor: Flavor = .joyful
     
     
     
     var body: some View {
-//        VStack {
-//            Picker("Flavor", selection: $selectedFlavor) {
-//                    ForEach(Flavor.allCases) { flavor in
-//                        Text(flavor.rawValue.capitalized)
-//                    }
-//
-//                }
-//            Spacer()
-//        }
-//        .pickerStyle(.segmented)
-//        .padding()
+        //        VStack {
+        //            Picker("Flavor", selection: $selectedFlavor) {
+        //                    ForEach(Flavor.allCases) { flavor in
+        //                        Text(flavor.rawValue.capitalized)
+        //                    }
+        //
+        //                }
+        //            Spacer()
+        //        }
+        //        .pickerStyle(.segmented)
+        //        .padding()
         
         GeometryReader { geometry in
             
             TabView{
-
+                
                 ForEach(mystery, id: \.id) { mystery in
                     NavigationLink(destination: RosaryDetail(mystery: mystery)
                         .navigationTitle(mystery.mysteryDesc+" Mysteries")
@@ -54,17 +54,17 @@ struct Rosary: View {
                                             Spacer()
                                             HStack {
                                                 VStack (spacing: 10){
-
+                                                    
                                                     HStack {
                                                         Text(mystery.mysteryName)
-                                                            .font(.callout)
+                                                            .font(.footnote)
                                                             .opacity(0.5)
                                                             .fontWeight(.semibold)
                                                             .textCase(.uppercase)
                                                             .kerning(0.2)
                                                         Spacer()
                                                     }
-
+                                                    
                                                     VStack {
                                                         HStack {
                                                             Text(mystery.mysteryDesc)
@@ -83,17 +83,20 @@ struct Rosary: View {
                                                     }
                                                 }
                                                 Spacer()
+                                                
                                                 Button(action: {}, label: {
                                                     NavigationLink(destination: RosaryDetail(mystery: mystery)
                                                         .navigationTitle(mystery.mysteryDesc+" Mysteries")
+                                                        .navigationBarTitleDisplayMode(.inline)
                                                     ) {
-                                                        Text("Start")
-                                                            .foregroundColor(.white)
-                                                    }
+                                                        Label ("Start", systemImage: "hands.sparkles.fill")
+                                                    }.fontWeight(.semibold)
+                                                        .buttonStyle(.borderedProminent)
+                                                        .cornerRadius(20)
+                                                        .shadow(color: .accentColor.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 7)
                                                 }
                                                 )
-                                                .buttonStyle(.borderedProminent)
-                                                .cornerRadius(20)
+                                                
                                             }
                                             .padding(20)
                                             .background(.thinMaterial)
@@ -106,7 +109,7 @@ struct Rosary: View {
                                 .background(.thinMaterial)
                                 .cornerRadius(20)
                                 //            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 7)
-
+                                
                             }
                             .padding(.top, 10.0)
                             .padding(.bottom, 60.0)
@@ -114,13 +117,13 @@ struct Rosary: View {
                             .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.1), radius: 10, x: 0, y: 10)
                         }
                     )
-//                    .onAppear {
-//                        if UIDevice.current.userInterfaceIdiom == .pad {
-//                            DispatchQueue.main.async {
-//                                selectedMysteryId = MysteryList.mysteries.first!.id
-//                            }
-//                        }
-//                    }
+                    //                    .onAppear {
+                    //                        if UIDevice.current.userInterfaceIdiom == .pad {
+                    //                            DispatchQueue.main.async {
+                    //                                selectedMysteryId = MysteryList.mysteries.first!.id
+                    //                            }
+                    //                        }
+                    //                    }
                 }
                 .buttonStyle(PlainButtonStyle())
             }
@@ -130,7 +133,7 @@ struct Rosary: View {
         }
         
         
-       
+        
     }
 }
 

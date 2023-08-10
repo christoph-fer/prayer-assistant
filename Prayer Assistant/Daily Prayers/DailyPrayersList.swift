@@ -1,20 +1,21 @@
 //
-//  SaintPrayersList.swift
+//  DailyPrayersList.swift
 //  Prayer Assistant
 //
-//  Created by Christopher Fernandes on 08/12/22.
+//  Created by Christopher Fernandes on 01/12/22.
 //
 
 import SwiftUI
 
-struct SaintPrayersList: View {
-    var saintPrayer: [SaintPrayer] = SaintPrayerList.saintPrayers
+struct DailyPrayersList: View {
+    
+    var dailyPrayer: [DailyPrayer] = DailyPrayerList.dailyPrayers
     @State var selectedPrayerId: UUID?
     
     var body: some View {
-        List(saintPrayer, id: \.id) { prayer in
-            NavigationLink(destination: SaintPrayersDetail(prayer: prayer) .navigationBarTitleDisplayMode(.large)
-                .navigationBarTitle(prayer.prayerName).multilineTextAlignment(.leading), tag: prayer.id, selection: $selectedPrayerId, label: {
+        List(dailyPrayer, id: \.id) { prayer in
+            NavigationLink(destination: DailyPrayersDetail(prayer: prayer) .navigationBarTitleDisplayMode(.large)
+                .navigationBarTitle(prayer.prayerName), tag: prayer.id, selection: $selectedPrayerId, label: {
                     HStack(spacing: 15) {
                         VStack(alignment: .leading, spacing: 5) {
                             Text(prayer.prayerName)
@@ -33,13 +34,13 @@ struct SaintPrayersList: View {
 //                }
 //            }
         }
-        .navigationTitle("Prayer to Saints")
+        .navigationTitle("Daily Prayers")
         .listStyle(.insetGrouped)
     }
 }
 
-struct SaintPrayersList_Previews: PreviewProvider {
+struct DailyPrayersList_Previews: PreviewProvider {
     static var previews: some View {
-        SaintPrayersList()
+        DailyPrayersList()
     }
 }

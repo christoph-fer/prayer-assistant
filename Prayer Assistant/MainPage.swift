@@ -10,6 +10,7 @@ import UIKit
 
 struct NavigationUtil {
     static func popToRootView() {
+        
         findNavigationController(viewController: UIApplication.shared.windows.filter { $0.isKeyWindow }.first?.rootViewController)?
             .popToRootViewController(animated: true)
     }
@@ -43,10 +44,15 @@ struct MainPage : View {
     var marianPrayer: [MarianPrayer] = MarianPrayerList.marianPrayers
     var psalm: [psalm] = psalmList.psalms
     var saintPrayer: [SaintPrayer] = SaintPrayerList.saintPrayers
+    var hymn: [Hymn] = HymnList.hymns
+    var station: [Station] = StationsList.stations
     
     @State var isAnimated: Bool = false
     
     @State private var showingAddView = false
+    @State var showingSheet: Bool = false
+    
+    @State private var lastHostingView: UIView!
     
     // Color scheme
     @Environment(\.colorScheme) var colorScheme
@@ -62,8 +68,11 @@ struct MainPage : View {
     //            self
     //        }
     //    }
+
     
     var body: some View {
+        
+        
         NavigationView {
             GeometryReader { geometry in
                 Image(colorScheme == .dark ? "home-dark-3b" : "home-4")
@@ -75,11 +84,21 @@ struct MainPage : View {
             }
             .overlay(
                 ScrollView(.vertical, showsIndicators: false, content: {
+                    
                     VStack {
                         HStack {
-                            Text("the catholic prayer companion.")
-                                .padding(.leading)
-                                .multilineTextAlignment(.leading)
+                            if #available(iOS 16.1, *) {
+                                Text("A Catholic Prayer Companion")
+                                
+                                    .padding(.leading)
+                                    .multilineTextAlignment(.leading)
+                                    .fontDesign(.rounded)
+                            } else {
+                                Text("A Catholic Prayer Companion")
+                                
+                                    .padding(.leading)
+                                    .multilineTextAlignment(.leading)
+                            }
                             Spacer()
                             
                         }
@@ -104,7 +123,7 @@ struct MainPage : View {
                                     .padding()
                                 }
                                 .frame(height: 130)
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -128,7 +147,7 @@ struct MainPage : View {
                                     .padding()
                                 }
                                 .frame(height: 130)
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -152,7 +171,7 @@ struct MainPage : View {
                                     .padding()
                                 }
                                 .frame(height: 130)
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -176,13 +195,37 @@ struct MainPage : View {
                                     .padding()
                                 }
                                 .frame(height: 130)
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
                         }
                         .padding()
                         LazyVGrid (columns: adaptiveRows, alignment: .center, spacing: 12) {
+                            
+                            NavigationLink(destination: Stations(station: station).navigationTitle("Stations of the Cross")
+                            )  {
+                                
+                                ZStack{
+                                    HStack {
+                                        
+                                        
+                                        HStack {
+                                            Text("Stations of the Cross")
+                                                .font(.headline)
+                                                .multilineTextAlignment(.leading)
+                                        }
+                                        Spacer()
+                                        HStack {
+                                            Image(systemName: "rectangle.stack")
+                                        }
+                                    }
+                                    .padding()
+                                }
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
+                            }
+                            .buttonStyle(PlainButtonStyle())
                             
                             NavigationLink(destination: PsalmsList(psalm: psalm)
                             )  {
@@ -203,7 +246,7 @@ struct MainPage : View {
                                     }
                                     .padding()
                                 }
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -225,7 +268,7 @@ struct MainPage : View {
                                     .padding()
                                 }
                                 .frame(height: 50)
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -246,7 +289,7 @@ struct MainPage : View {
                                     .padding()
                                 }
                                 .frame(height: 50)
-                                .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 15))
+                                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 15))
                                 .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.05), radius: 10, x: 0, y: 10)
                             }
                             .buttonStyle(PlainButtonStyle())
@@ -257,8 +300,52 @@ struct MainPage : View {
                     }
                 })
             )
-            .navigationTitle("catholicism.")
+            .navigationTitle("BetterPray")
             .navigationBarTitleDisplayMode(.large)
+//            .toolbar {
+//                ToolbarItem(placement: .automatic, content: {
+//                    Button(action: {
+//                        showingSheet.toggle()
+//                    }, label: {
+//                        Image(systemName: "heart.circle.fill").symbolRenderingMode(.hierarchical)
+//                    }).sheet(isPresented: $showingSheet)  {
+//                        NavigationView {
+//                            
+//                            List {
+//                                HStack {
+//                                    Image(systemName: "sparkles").symbolRenderingMode(.hierarchical)
+//                                    Text("What's new")
+//                                }
+//                                HStack {
+//                                    Image(systemName: "star.leadinghalf.filled").symbolRenderingMode(.hierarchical)
+//                                    Text("Rate this app")
+//                                }
+//                            }
+//
+//                            .navigationTitle("About")
+//                            .toolbar{
+//                                ToolbarItem(placement: .destructiveAction){
+//                                    Button(action: {
+//                                        self.showingSheet = false
+//                                    }
+//                                    ) {
+//                                        Image(systemName: "xmark.circle.fill")
+//                                            .font(.system(size: 20))
+//                                            .opacity(0.3)
+//                                            .padding(.top, 10)
+//                                    }
+//                                    .buttonStyle(.plain)
+//                                }
+//                            }
+//                            .listStyle(.automatic)
+//
+//                        }
+//                        .presentationDetents([.large])
+//                        .presentationDragIndicator(.visible)
+//                        .background(.regularMaterial)
+//                    }
+//                })
+//            }
             
             VStack (spacing: 4) {
                 
@@ -267,53 +354,35 @@ struct MainPage : View {
                     .font(.system(.title3, design: .rounded))
                     .offset(x: 0, y: isAnimated ? 0 : 20)
                     .opacity(isAnimated ? 1 : 0)
-                //.blur(radius: isAnimated ? 0 : 3)
-                
-                    .animation(
-                        Animation
-                            .spring(response: 1, blendDuration: 5)
-                    )
-                Text("catholicism.")
-                    .font(.largeTitle)
+                    .blur(radius: isAnimated ? 0 : 3)
+                    .animation(Animation.spring(response: 1, blendDuration: 5.0), value: isAnimated)
+                Text("BetterPray")
+                    .font(.system(.largeTitle, design: .default))
                     .fontWeight(.bold)
-                
-                //.blur(radius: isAnimated ? 0 : 3)
                     .offset(x: 0, y: isAnimated ? 0 : 40)
+                    .blur(radius: isAnimated ? 0 : 3)
                     .opacity(isAnimated ? 1 : 0)
-                    .animation(
-                        Animation
-                            .spring(response: 1, blendDuration: 5)
-                            .delay(0.05)
-                    )
+                    .animation(Animation.spring(response: 1, blendDuration: 5.0).delay(0.1), value: isAnimated)
                 
                 if horizontalSizeClass == .compact {
-                    Button("Get Started", action: {
+                    Button {
                         NavigationUtil.popToRootView()
-                    })
-                    .buttonStyle(.borderedProminent)
-                    .cornerRadius(20).opacity(1)
-                    .padding(.top, 40.0)
-                    //.fontWeight(.bold)
-                    //.font(.system(.subheadline, design: .rounded))
-                    .opacity(isAnimated ? 1 : 0)
-                    .animation(
-                        Animation
-                            .spring(blendDuration: 1)
-                            .delay(1)
-                    )
-                    .fontWeight(.semibold)
-                    .shadow(color: .accentColor.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 7)
+                    } label: {
+                        Label ("Let's Pray ", systemImage: "hands.sparkles.fill")
+                    }.fontWeight(.semibold)
+                        .buttonStyle(.borderedProminent).cornerRadius(20)
+                        .shadow(color: colorScheme == .dark ? .accentColor.opacity(0.6) : .accentColor.opacity(0.5), radius: /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/, y: 7)
+                        .opacity(isAnimated ? 1 : 0)
+                        .padding(.top, 40.0)
+                        .animation(Animation.spring(blendDuration: 1.0).delay(1), value: isAnimated)
+                    
                 } else {
                     Text("Select a prayer on your left :)")
                         .opacity(0.7)
                         .padding()
                         .font(.system(.subheadline, design: .rounded))
                         .opacity(isAnimated ? 1 : 0)
-                        .animation(
-                            Animation
-                                .spring(blendDuration: 1)
-                                .delay(1)
-                        )
+                        .animation(Animation.spring(blendDuration: 1.0).delay(1), value: isAnimated)
                 }
                 Spacer()
             }
@@ -329,7 +398,45 @@ struct MainPage : View {
                 Text("Select a prayer to continue :)")
             }
         }
-        //.phoneOnlyNavigationView()
+        //        //.phoneOnlyNavigationView()
+        //        #endif
+    }
+}
+
+struct ProfileView: View {
+    var body: some View {
+        Circle()
+            .size(width: 40, height: 40)
+        Image("iOSbetterpray")
+            .resizable()
+            .scaledToFill()
+            .frame(width: 40, height: 40)
+            .clipShape(Circle())
+    }
+}
+
+struct BarContent: View {
+    var body: some View {
+        Button {
+            print("Profile tapped")
+        } label: {
+            ProfilePicture()
+        }
+    }
+}
+
+struct ProfilePicture: View {
+    var body: some View {
+        Circle()
+            .fill(
+                LinearGradient(
+                    gradient: Gradient(colors: [.red, .blue]),
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
+            .frame(width: 40, height: 40)
+            .padding(.horizontal)
     }
 }
 

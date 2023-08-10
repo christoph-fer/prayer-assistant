@@ -16,14 +16,16 @@ struct Prayer_AssistantApp: App {
         
         WindowGroup {
             ContentView()
+                .handlesExternalEvents(preferring: ["betterpray"], allowing: ["betterpray"])
                 .environment(\.managedObjectContext , dataController.container.viewContext)
+            
             
                 .withHostingWindow { window in
                     #if targetEnvironment(macCatalyst)
                     if let titlebar = window?.windowScene?.titlebar {
                         titlebar.titleVisibility = .hidden
                         titlebar.toolbar = nil
-                        titlebar.toolbarStyle = .unifiedCompact
+                        titlebar.toolbarStyle = .unified
                     }
                     #endif
                     

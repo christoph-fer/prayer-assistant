@@ -32,6 +32,7 @@ struct Hymns : View {
             .navigationTitle("Hymns")
             .navigationBarTitleDisplayMode(.large)
             .background(.thinMaterial)
+            .navigationBarTitle(Text("Hymns"), displayMode: NavigationBarItem.TitleDisplayMode.large)
             
             Text("Select a hymn to continue :)")
         }

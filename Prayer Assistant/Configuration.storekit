@@ -1,0 +1,78 @@
+{
+  "identifier" : "F45400C1",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "5",
+      "familyShareable" : false,
+      "internalID" : "0686843F",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Small Donation",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.donate.small",
+      "referenceName" : "Small Donation",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "10",
+      "familyShareable" : false,
+      "internalID" : "2BCD4AC2",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Medium Donation",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.donate.medium",
+      "referenceName" : "Medium Donation",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "25",
+      "familyShareable" : false,
+      "internalID" : "F1250C58",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Large Donation",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.donate.large",
+      "referenceName" : "Large Donation",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "50",
+      "familyShareable" : false,
+      "internalID" : "52A8595A",
+      "localizations" : [
+        {
+          "description" : "",
+          "displayName" : "Generous Donation",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.donate.generous",
+      "referenceName" : "Generous Donation",
+      "type" : "Consumable"
+    }
+  ],
+  "settings" : {
+
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 2,
+    "minor" : 0
+  }
+}

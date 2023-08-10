@@ -17,71 +17,81 @@ struct Stations: View {
     var body: some View {
         GeometryReader { geometry in
             TabView{
-                VStack {
-                    VStack {
-                        ZStack {
-                            Image("cross-pic-5")
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-                                .frame(width: geometry.size.width - 30)
-                                .matchedGeometryEffect(id: "station", in: namespace)
+                NavigationLink(destination: StationsStart()
+                    .navigationTitle("Preparatory Prayer")
+                    .navigationBarTitleDisplayMode(.inline)) {
+                        VStack {
                             VStack {
-                                Spacer()
-                                HStack {
-                                    VStack (spacing: 10){
-                                        
+                                ZStack {
+                                    Image("cross-pic-5")
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: geometry.size.width - 30)
+                                        .matchedGeometryEffect(id: "station", in: namespace)
+                                    VStack {
+                                        Spacer()
                                         HStack {
-                                            Text("Preparatory Prayer")
-                                                .font(.callout)
-                                                .opacity(0.5)
-                                                .fontWeight(.semibold)
-                                                .textCase(.uppercase)
-                                                .kerning(0.2)
+                                            VStack (spacing: 10){
+                                                
+                                                HStack {
+                                                    Text("Preparatory Prayer")
+                                                        .font(.footnote)
+                                                        .opacity(0.5)
+                                                        .fontWeight(.semibold)
+                                                        .textCase(.uppercase)
+                                                        .kerning(0.2)
+                                                    Spacer()
+                                                }
+                                                
+                                                HStack {
+                                                    Text("In honour of the Passion and Death of our Lord")
+                                                        .font(.title)
+                                                        .fontWeight(.bold)
+                                                        .multilineTextAlignment(.leading)
+                                                    Spacer()
+                                                }
+                                                
+                                                
+                                            }
                                             Spacer()
+                                            Button(action: {}, label: {
+                                                NavigationLink(destination: StationsStart()
+                                                    .navigationBarTitleDisplayMode(.inline)
+                                                ) {
+                                                    Label ("Pray", systemImage: "hands.sparkles.fill")
+                                                }.fontWeight(.semibold)
+                                                    .buttonStyle(.borderedProminent)
+                                                    .cornerRadius(20)
+                                                    .shadow(color: .accentColor.opacity(0.5), radius: 10, y: 7)
+                                            }
+                                            )
                                         }
-                                        
-                                        HStack {
-                                            Text("In honour of the Passion and Death of our Lord")
-                                                .font(.title)
-                                                .fontWeight(.bold)
-                                                .multilineTextAlignment(.leading)
-                                            Spacer()
-                                        }
-                                        
-                                        
+                                        .padding(20)
+                                        .background(.thinMaterial)
+                                        .cornerRadius(15)
+                                        .padding(16)
                                     }
-                                    Spacer()
-                                    Button(action: {}, label: {
-                                        NavigationLink(destination: StationsStart()
-                                            .navigationBarTitleDisplayMode(.large)
-                                        ) {
-                                            Text("Read")
-                                                .foregroundColor(.white)
-                                        }
-                                    }
-                                    )
-                                    .buttonStyle(.borderedProminent)
-                                    .cornerRadius(20)
                                 }
-                                .padding(20)
-                                .background(.thinMaterial)
-                                .cornerRadius(15)
-                                .padding(16)
                             }
+                            //            .padding()
+                            .background(.thinMaterial)
+                            .cornerRadius(20)
+                            //            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 7)
+                            
                         }
+                        .padding(.top, 10.0)
+                        .padding(.bottom, 60.0)
+                        .padding(.horizontal, 20.0)
+                        .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.1), radius: 10, x: 0, y: 10)
                     }
-                    //            .padding()
-                    .background(.thinMaterial)
-                    .cornerRadius(20)
-                    //            .shadow(color: Color.black.opacity(0.1), radius: 10, x: 0, y: 7)
-                    
-                }
-                .padding(.top, 10.0)
-                .padding(.bottom, 60.0)
-                .padding(.horizontal, 20.0);
+                    .buttonStyle(PlainButtonStyle())
+               
                 
                 ForEach(station, id: \.id) { station in
-                    NavigationLink(destination: StationDetail(station: station), label: {
+                    
+                    NavigationLink(destination: StationDetail(station: station)
+                        .navigationTitle(station.stationName)
+                        .navigationBarTitleDisplayMode(.inline), label: {
                             VStack {
                                 VStack {
                                     ZStack {
@@ -96,7 +106,7 @@ struct Stations: View {
                                                     
                                                     HStack {
                                                         Text(station.stationName)
-                                                            .font(.callout)
+                                                            .font(.footnote)
                                                             .opacity(0.5)
                                                             .fontWeight(.semibold)
                                                             .textCase(.uppercase)
@@ -115,16 +125,19 @@ struct Stations: View {
                                                     
                                                 }
                                                 Spacer()
+                                                
                                                 Button(action: {}, label: {
                                                     NavigationLink(destination: StationDetail(station: station)
+//                                                        .navigationTitle(mystery.mysteryDesc+" Mysteries")
+//                                                        .navigationBarTitleDisplayMode(.inline)
                                                     ) {
-                                                        Text("Read")
-                                                            .foregroundColor(.white)
-                                                    }
+                                                        Label ("Pray", systemImage: "hands.sparkles.fill")
+                                                    }.fontWeight(.semibold)
+                                                        .buttonStyle(.borderedProminent)
+                                                        .cornerRadius(20)
+                                                        .shadow(color: .accentColor.opacity(0.5), radius: 10, y: 7)
                                                 }
                                                 )
-                                                .buttonStyle(.borderedProminent)
-                                                .cornerRadius(20)
                                             }
                                             .padding(20)
                                             .background(.thinMaterial)
@@ -142,6 +155,7 @@ struct Stations: View {
                             .padding(.top, 10.0)
                             .padding(.bottom, 60.0)
                             .padding(.horizontal, 20.0)
+                            .shadow(color: Color(hue: 1.0, saturation: 0.0, brightness: 0.0, opacity: 0.1), radius: 10, x: 0, y: 10)
                         }
                     )
                 }
@@ -150,11 +164,13 @@ struct Stations: View {
             .padding(.bottom, 10)
             .tabViewStyle(.page(indexDisplayMode: .always))
             .indexViewStyle(.page(backgroundDisplayMode: .always))
+            .onOpenURL { url in
+                // used to fetch the deep link url.
+                print(url)
+            }
             //        .background(.regularMaterial)
         }
-        
     }
-    
 }
 
 struct Stations_Previews: PreviewProvider {

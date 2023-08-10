@@ -37,24 +37,69 @@ struct RosaryDetail: View {
                     ZStack {
                         GeometryReader{reader in
                             ZStack {
+                                
+                                
+                                //                                Image(mystery.mysteryPic)
+                                Image(mystery.mysteryPic)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .offset(y: -reader.frame(in: .global).minY)
+                                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 270)
+                                
                                 Image(mystery.mysteryPic)
                                 
                                     .resizable()
                                     .aspectRatio(contentMode: .fill)
+                                    .blur(radius: 10, opaque: true)
+                                    .mask(
+                                        LinearGradient(gradient: Gradient( stops: [
+                                            .init(color: Color .white, location: 0.1),
+                                            .init(color: Color .white, location: 0.2),
+                                            .init(color: Color .white.opacity(0), location: 0.5)
+                                        ]
+                                        ),startPoint: .bottom,
+                                          endPoint: .top)
+                                    )
+                                    .offset(y: -reader.frame(in: .global).minY)
+                                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 270)
                                 
+                                
+                                
+                                Rectangle()
+                                    .foregroundColor(.clear)        // Making rectangle transparent
+                                    .background(LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.3)]), startPoint: .top, endPoint: .bottom))
                                     .offset(y: -reader.frame(in: .global).minY)
                                     .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 270)
                                 Rectangle()
                                     .foregroundColor(.clear)        // Making rectangle transparent
                                     .background(LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.5)]), startPoint: .top, endPoint: .bottom))
-                                    .frame(width: UIScreen.main.bounds.width, height: 270)
+                                    .frame(width: UIScreen.main.bounds.width, height: 0)
+                                
+                                //                                Image("palm-pic")
+                                //                                .resizable()
+                                //                                .aspectRatio(contentMode:.fill)
+                                //                                .offset(y: -reader.frame(in: .global).minY)
+                                //                                .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 270)
+                                //                                .mask(
+                                //                                LinearGradient(gradient: Gradient( stops: [ .init(color: Color .white, location: 0.2),
+                                //                                .init(color: Color .white, location: 0.4),
+                                //                                                                            .init(color: Color .white.opacity(0), location: 0.8)]), startPoint: .bottom,
+                                //                                               endPoint: .top))
+                                //                                .blur(radius: 5)
+                                
+                                
+                                
                             }
                             
-                            
-                            
-                            
-                            
+                            //                            Rectangle()
+                            //                                .foregroundColor(.clear)        // Making rectangle transparent
+                            //                                .background(.ultraThinMaterial)
+                            //                                .blur(radius: 20)
+                            //                                .offset(x: -50, y: -500)
+                            //                                .frame(width: UIScreen.main.bounds.width + 100, height: 600)
                         }
+                        
+                        
                         VStack(spacing: 10) {
                             Spacer()
                             HStack {
@@ -332,7 +377,7 @@ struct RosaryDetail: View {
                         NavigationView {
                             VStack {
                                 HStack {
-                                    Text("Our Father, Who art in heaven, Hallowed be Thy Name. Thy Kingdom come. Thy Will be done, on earth as it is in Heaven. Give us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.")
+                                    Text("Our Father, Who art in heaven, Hallowed be Thy Name. Thy Kingdom come. Thy Will be done, on earth as it is in Heaven.\n\nGive us this day our daily bread. And forgive us our trespasses, as we forgive those who trespass against us. And lead us not into temptation, but deliver us from evil. Amen.")
                                         .font(.title2)
                                         .toolbar{
                                             ToolbarItem(placement: .destructiveAction){
@@ -360,7 +405,7 @@ struct RosaryDetail: View {
                             .navigationTitle("Our Father")
                             
                         }
-                        .presentationDetents([.medium, .large])
+                        .presentationDetents([.large])
                         .presentationDragIndicator(.visible)
                         .background(.regularMaterial)
                         
@@ -377,7 +422,7 @@ struct RosaryDetail: View {
                         NavigationView {
                             VStack {
                                 HStack {
-                                    Text("Hail Mary, Full of Grace, The Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus. Holy Mary, Mother of God, pray for us sinners now, and at the hour of our death. Amen.")
+                                    Text("Hail Mary, Full of Grace, The Lord is with thee. Blessed art thou among women, and blessed is the fruit of thy womb, Jesus.\n\nHoly Mary, Mother of God, pray for us sinners now, and at the hour of our death. Amen.")
                                         .font(.title2)
                                         .toolbar{
                                             ToolbarItem(placement: .destructiveAction){
@@ -401,19 +446,22 @@ struct RosaryDetail: View {
                                 }
                                 
                                 Spacer()
-                                Text("_Recite 10x_")
+                                Text("Recite 10x")
                                 
-                                Slider(value: $decade, in: 0...10, step: 1, minimumValueLabel: Text("0"), maximumValueLabel: Text("10"), label: {
+                                Slider(value: $decade, in: 0...10, step: 1, minimumValueLabel: Text("\(decade, specifier: "%.0f")"), maximumValueLabel: Text("10"), label: {
                                     Text("Recite 3x")
                                 }
                                 )
                                 
+                                Text("Count your beads")
+                                    .font(.footnote)
+                                    .fontWeight(.regular)
                             }
                             .padding()
                             .navigationTitle("Hail Mary")
                             
                         }
-                        .presentationDetents([.medium, .large])
+                        .presentationDetents([.large])
                         .presentationDragIndicator(.visible)
                         .background(.regularMaterial)
                         

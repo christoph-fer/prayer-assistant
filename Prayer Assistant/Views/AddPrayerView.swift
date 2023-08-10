@@ -22,7 +22,7 @@ struct AddPrayerView: View {
                 TextField("Your prayer title", text: $name).font(.largeTitle).fontWeight(.bold)
                
                VStack {
-                   TextField("Your prayer content", text: $prayercontent).font(.title2).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
+                   TextField("Your prayer content", text: $prayercontent, axis: .vertical).font(.title2).multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                }
                 Spacer()
             }

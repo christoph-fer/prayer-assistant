@@ -16,52 +16,105 @@ struct StationDetail: View {
     @State private var showingHailMary = false
     @State private var showingGloryBe = false
     
+    @Environment (\.horizontalSizeClass) var horizontalSizeClass: UserInterfaceSizeClass?
+    
     var body: some View {
         ScrollView(.vertical, showsIndicators: false, content: {
             VStack {
-                ZStack {
-                    GeometryReader{reader in
-                        ZStack {
-                            Image(station.stationPic)
-                            
-                                .resizable()
-                                .aspectRatio(contentMode: .fill)
-
-                                .offset(y: -reader.frame(in: .global).minY)
-                                .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 270)
-                            Rectangle()
-                                .foregroundColor(.clear)        // Making rectangle transparent
-                                .background(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .top, endPoint: .bottom))
-                                       .frame(width: UIScreen.main.bounds.width, height: 270)
+                if horizontalSizeClass == .compact {
+                    ZStack {
+                        GeometryReader{reader in
+                            ZStack {
+                                Image(station.stationPic)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .offset(y: -reader.frame(in: .global).minY)
+                                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 470)
+                                
+                                Image(station.stationPic)
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .blur(radius: 10, opaque: true)
+                                    .mask(
+                                        LinearGradient(gradient: Gradient( stops: [
+                                            .init(color: Color .white, location: 0.1),
+                                            .init(color: Color .white, location: 0.2),
+                                            .init(color: Color .white.opacity(0), location: 0.5)
+                                        ]
+                                        ),startPoint: .bottom,
+                                          endPoint: .top)
+                                    )
+                                    .offset(y: -reader.frame(in: .global).minY)
+                                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 470)
+                                
+                                Rectangle()
+                                    .foregroundColor(.clear)        // Making rectangle transparent
+                                    .background(LinearGradient(gradient: Gradient(colors: [.clear, .black.opacity(0.3)]), startPoint: .top, endPoint: .bottom))
+                                    .offset(y: -reader.frame(in: .global).minY)
+                                    .frame(width: UIScreen.main.bounds.width, height: reader.frame(in: .global).minY + 470)
+                            }
                         }
-                    }
-                    VStack(spacing: 10) {
-                        Spacer()
-                        HStack {
-                            Text(station.stationName)
-                                .font(.callout)
-                                .opacity(0.7)
-                                .fontWeight(.semibold)
-                                .textCase(.uppercase)
-                                .kerning(0.2)
-                                .foregroundColor(.white)
+                        VStack(spacing: 10) {
                             Spacer()
+                            HStack {
+                                Text(station.stationName)
+                                    .font(.callout)
+                                    .opacity(0.7)
+                                    .fontWeight(.semibold)
+                                    .textCase(.uppercase)
+                                    .kerning(0.2)
+                                    .foregroundColor(.white)
+                                Spacer()
+                            }
+                            HStack {
+                                Text(station.stationDesc)
+                                    .font(.largeTitle)
+                                    .fontWeight(.bold)
+                                    .foregroundColor(.white)
+                                Spacer()
+                            }
                         }
-                        HStack {
-                            Text(station.stationDesc)
-                                .font(.largeTitle)
-                                .fontWeight(.bold)
-                                .foregroundColor(.white)
-                            Spacer()
-                        }
+                        .padding()
                     }
-                    .padding()
+                    .frame(height: 460)
                 }
-                .frame(height: 260)
+               
             }
             VStack {
+//                VStack(spacing: 10) {
+//                    Spacer()
+//                    HStack {
+//                        Text(station.stationName)
+//                            .font(.callout)
+//                            .opacity(0.7)
+//                            .fontWeight(.semibold)
+//                            .textCase(.uppercase)
+//                            .kerning(0.2)
+//                            .foregroundColor(.white)
+//                        Spacer()
+//                    }
+//                    HStack {
+//                        Text(station.stationDesc)
+//                            .font(.largeTitle)
+//                            .fontWeight(.bold)
+//                            .foregroundColor(.white)
+//                        Spacer()
+//                    }
+//                }
+//                .padding(.bottom)
+                
                 HStack {
-                    Text("**Leader:** We adore You, O Christ, and we praise You. \n\n**All:**  Because, by Your holy cross, You have redeemed the world. \n\n**Leader:** Consider how Jesus Christ, after being scourged and crowned with thorns, was unjustly condemned by Pilate to die on the cross. \n\n**All:** My adorable Jesus,it was not Pilate; no, it was my sins that condemned You to die. I beseech You, by the merits of this sorrowful journey, to assist my soul on its journey to eternity. I love You, beloved Jesus; I love You more than I love myself. With all my heart I repent of ever having offended You. Grant that I may love You always; and then do with me as You will.")
+                    Text("**Leader:** We adore You, O Christ, and we praise You. \n\n**All:**  Because, by Your holy cross, You have redeemed the world.\n")
+                        .font(.title2)
+                    Spacer()
+                }
+                HStack {
+                    Text(.init(station.stationLeader))
+                        .font(.title2)
+                    Spacer()
+                }
+                HStack {
+                    Text(.init(station.stationAll))
                         .font(.title2)
                     Spacer()
                 }
@@ -202,19 +255,21 @@ struct StationDetail: View {
                     .cornerRadius(20)
                     
                     Spacer()
+                    
                 }
                 .padding(.vertical)
                 HStack {
-                    Text("Through her heart, His sorrow shared, \nAll His bitter anguish bearing \nNow at length the sword has passed!")
-                        .font(.title2)
+                    Text(station.stationEnd)
+                        .font(.title3)
+                        //.multilineTextAlignment(.center)
                         .opacity(0.6)
                     Spacer()
                 }
-                
+
                 
             }
             .padding()
-            .padding(.top, 10)
+            //.padding(.top, 10)
             
             .background(Color(UIColor.systemBackground))
         })
